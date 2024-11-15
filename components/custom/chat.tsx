@@ -1,9 +1,19 @@
 import { ChatHeader } from "@/components/custom/chat-header";
-export function Chat() {
+import { Message } from "ai";
+
+export function Chat({
+    id,
+    initialMessages,
+    selectedModelId,
+}: {
+    id: string;
+    initialMessages: Array<Message>;
+    selectedModelId: string;
+}) {
     return (
         <>
             <div>
-                <ChatHeader />
+                <ChatHeader selectedModelId={selectedModelId} />
             </div>
         </>
     )
